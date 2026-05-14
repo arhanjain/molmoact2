@@ -34,7 +34,14 @@
 
 MolmoAct2 is Ai2's open family of action reasoning models for robot control and real-world deployment. It builds on the Molmo2-ER embodied-reasoning vision-language backbone, adds robot state and action modeling, and connects the VLM to a flow-matching continuous action expert for closed-loop manipulation. The release includes base checkpoints for continued training, fine-tuned robot policies for evaluation and deployment, and the datasets used to build MolmoAct2 and Molmo2-ER.
 
-## Models
+---
+### Updates
+- **[2026/05/14]** 🔥 We have released MolmoAct2 lerobot workflow for fine-tuning and inference. [**Check it out**](https://github.com/allenai/lerobot/tree/molmoact2-policy). 
+- **[2025/05/06]** 🔥 Detail implementation and setup for Franka, SO-100/101, and bimanual YAM have been released at  [**2 Real-world Deployment**](#2-real-world-deployment).
+- **[2026/05/05] 🔥 [MolmoAct2]([https://huggingface.co/collections/allenai/molmoact-689697591a3936fba38174d7](https://allenai.org/blog/molmoact2))** has been released!
+
+
+## 1 Models
 
 ### Base Models
 
@@ -84,7 +91,7 @@ cd lerobot
 
 For training, evaluation, and deployment instructions, see the MolmoAct2 LeRobot documentation at [`docs/source/molmoact2.mdx`](https://github.com/allenai/lerobot/blob/molmoact2-policy/docs/source/molmoact2.mdx). To reproduce the original LIBERO benchmark results exactly with the v0.5.1 evaluation stack, use the pinned inference branch [`allenai/lerobot:molmoact2-hf-inference`](https://github.com/allenai/lerobot/tree/molmoact2-hf-inference).
 
-## Real-world Deployment
+## 2 Real-world Deployment
 
 MolmoAct2 supports out-of-the-box deployment on three robot embodiments:
 
@@ -110,18 +117,18 @@ Implementation code for setting up, data collection, and inference for Bimanual 
 
 For the Franka setup, we recommend following the official [DROID implementation](https://github.com/droid-dataset/droid) for best results.
 
-## Coming Soon
+## 3 Coming Soon
 
 Full code for training, fine-tuning, deployment, evaluation, and more details are coming soon.
 
-## License
+## 4 License
 
 This model is licensed under Apache 2.0. It is intended for research and educational use in accordance with Ai2's [Responsible Use Guidelines](https://allenai.org/responsible-use).
 
-## Model and Hardware Safety
+## 5 Model and Hardware Safety
 MolmoAct2 generate robot actions from visual observations and language instructions, but their behavior may vary across embodiments, environments, and hardware configurations. Users should carefully validate model outputs before deployment, especially when operating physical robots or other actuated systems. Where possible, actions should be monitored through interpretable intermediate outputs (adaptive depth map), simulation rollouts, action limits, or other safety checks before execution on hardware. The model’s action space should be bounded by the training data, robot controller limits, and task-specific safety constraints, including limits on speed, workspace, torque, and contact force. Users should follow the hardware manufacturer’s safety guidelines, use appropriate emergency-stop mechanisms, and operate the system only in a safely configured environment with human supervision.
 
-## Contacts
+## 6 Contacts
 
 For questions, collaborations, or support, please contact with:
 ```
@@ -129,7 +136,7 @@ For questions, collaborations, or support, please contact with:
 ```
 Found a bug or have a feature request? Please open a GitHub issue.
 
-## Citation
+## 7 Citation
 
 ```bibtex
 @misc{fang2026molmoact2actionreasoningmodels,
