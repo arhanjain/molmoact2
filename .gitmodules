@@ -2,3 +2,6 @@
 	path = lerobot
 	url = https://github.com/allenai/lerobot
 	branch = molmoact2-policy
+[submodule "YAM"]
+	path = YAM
+	url = https://github.com/Everloom-129/YAM.git
