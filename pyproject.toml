@@ -20,6 +20,9 @@ dependencies = [
     "fastapi>=0.116",
     "uvicorn[standard]>=0.35",
     "json-numpy>=2.1.0",
+    # Used by the openpi-websocket bridge server (examples/droid/host_server_droid_openpi.py)
+    "msgpack>=1.0.5",
+    "websockets>=11.0",
     "mani-skill>=3.0.1",
     "tyro>=1.0.13",
     "imageio>=2.37.3",
